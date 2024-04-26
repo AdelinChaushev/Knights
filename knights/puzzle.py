@@ -45,8 +45,8 @@ knowledge3 = And(
     Or(BKnight, BKnave),
     Or(CKnight, CKnave)
 )
-knowledge3.add(Implication(BKnave,And(AKnight,CKnight)))
-knowledge3.add(BKnave)
+knowledge3.add(Implication(Not(BKnight),And(AKnight,CKnight)))
+knowledge3.add(Not(BKnight))
 
 def main():
     symbols = [AKnight, AKnave, BKnight, BKnave, CKnight, CKnave]
